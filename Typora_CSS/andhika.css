@@ -1,5 +1,5 @@
 html {
-	font-size: 24px;
+	font-size: 18px;
 }
 
 html, body {
@@ -50,6 +50,24 @@ body {
 	text-align: justify;
 }
 
+/* 高亮 */
+#write mark {
+    background-color: #CFFCB2;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #4F683B;
+    font-weight: 500;
+}
+
+/* 斜体 */
+#write em {
+ 	padding: 0 2px 0 2px;
+ 	font-style: normal;
+	font-weight: bold;
+    color: #E8BDB7;
+}
+
 /* 文本 */
 #write {
 	max-width: 960px;
@@ -86,16 +104,16 @@ body {
 h1 {
 	margin-top: 0.3em;
 	font-weight: bold;
-	color: #4F683B;
+	color: #4F683B!important;
 	text-align: center;
-	font-size:3em
+	font-size: 2.4em
 }
 
 /* 二级主题 */
 h2 {
 	margin-top:2em;
 	font-weight: bold;
-	color: #4F683B
+	font-size: 2.1em;
 }
 
 /* 三级主题 */
@@ -105,14 +123,13 @@ h3 {
 	margin-top: 1.6em auto 1.2em;
 	border-left: 5px solid #E8BDB7;
 	padding-left: 9px;
-	color: #4F683B;
+	font-size: 1.8em
 }
 
 /* 四级主题 */
 h4 {
 	font-weight: bold;
 	margin-top: 1.5em;
-	color: #4F683B
 
 }
 
@@ -120,14 +137,13 @@ h4 {
 h5 {
 	font-weight: bold;
 	margin-top: 1.5em;
-	color: #4F683B
 }
 
 /* 一级标题下划线 */
 h1:after{
 	border-bottom: 3px solid #E8BDB7;
    	content: '';
-   	width: 160px;
+   	width: 90px;
    	display: block;
    	margin: 0 auto;
    	height: 1px
@@ -145,14 +161,16 @@ h2:after{
 	content: '';
 	display: block;
 	margin 0 auto;
-	width: 1600px;
-	height; 1px
+	width: 1030px;
+	height; 1px;
+	margin-right: 0.83em;
 }
 
 /* 一级二级，二级三级间距 */
 h1+h2, h2+h3 {
 	margin-top: 0.83em;
 }
+
 
 /* 文本 */
 p,
@@ -162,6 +180,7 @@ p,
 	-webkit-hypens: auto;
 	-moz-hypens: auto;
 	hyphens: auto;
+	font-size: 1.2em;
 }
 
 /* 无序列表 */ 
@@ -171,24 +190,41 @@ ul {
 	color: #D7C4AC
 }
 
+/* 行内公式 */
+[md-inline='inline_math'] {
+     color: #4F683B;
+     font-size: 100%;
+ }
+
 /* 有序列表 */
 ol {
 	padding-left: 1.3em;
 }
 
+/* 列表标识符颜色 */
+#write ol>li,
+#write ul>li {
+    color: #E8BDB7;
+    font-weight: bold;
+}
+#write ol>li>*,
+#write ul>li>* {
+    color: #333;
+    font-weight: normal;
+}
+
 /* 引用 */
 blockquote {
-	background: #f9f9f9;
+	background-color: #E0F8EB;
 	margin-left: 0.1em;
 	padding-left: 0.5em;
-	border-left: 10px solid #E8BDB7;
+	border-left: 7px solid #4F683B;
 }
 
 blockquote {
-	color: #D7C4AC;
 	content: open-quote;
-	font-size: 0.8em;
-	line-height: 1.5em;
+	font-size: 0.9em;
+	line-height: 2.0em;
 	margin-right: 0.25em;
 	vertical-align: -0.4em;
 }
@@ -228,7 +264,6 @@ a img {
 }
 h1 a,
 h1 a:hover {
-	color: #4F683B;
 	text-decoration: none;
 }
 
@@ -249,19 +284,31 @@ hr {
    	padding-top: 3px;
 }
 
+
+#write strong {
+    padding: 0.1em;
+    color: #4F683B;
+}
+
+
 /* 表格 */
 table {
-	margin-bottom: 1.333333rem
+	margin-bottom: 1.333333rem;
+	text-align: center;
 }
 table th,
 table td {
 	padding: 8px;
 	line-height: 1.333333rem;
 	vertical-align: top;
-	border-top: 1px solid #ddd
+	border: 2.4px solid #4F683B
 }
 table th {
-	font-weight: bold
+	font-weight: bold;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f9f9f9;
 }
 table thead th {
 	vertical-align: bottom
@@ -272,10 +319,13 @@ table colgroup+thead tr:first-child th,
 table colgroup+thead tr:first-child td,
 table thead:first-child tr:first-child th,
 table thead:first-child tr:first-child td {
-	border-top: 0
+	border-top: 3px solid #4F683B;
+	border-left: 3px solid #4F683B;
+	border-right: 3px solid #4F683B;
+	border-bottom: 3px solid #4F683B;
 }
 table tbody+tbody {
-	border-top: 2px solid #ddd
+	border-top: 2px solid #4F683B；
 }
 
 .task-list{
